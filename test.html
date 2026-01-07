@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Espace étudiants</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* Corps de la page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Conteneur principal du formulaire */
+        .container {
+            width: 50%;                     /* largeur du container */
+            margin: 40px auto;              /* centré horizontalement */
+            background: #fff;               /* fond blanc */
+            border-radius: 5px;             /* coins arrondis */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ombre douce */
+
+            display: flex;                  /* flex pour gérer haut/bas */
+            flex-direction: column;         /* empilement vertical */
+            justify-content: space-between; /* espace entre formulaire et bloc bas */
+            height: 500px;                  /* hauteur fixe pour aligner le bloc bas */
+            padding-bottom: 0;
+        }
+
+        /* Titre de la page */
+        .header {
+            background: #e6e6e6;            /* fond gris clair */
+            padding: 18px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 20px;
+            border-radius: 5px 5px 0 0;     /* coins arrondis seulement en haut */
+        }
+
+        /* Message d'information */
+        .info {
+            margin: 10px;
+            padding: 20px;
+            background: #d9edf7;           /* fond bleu clair */
+            color: #31708f;                /* texte bleu foncé */
+            border-radius: 2px;
+            text-align: center;
+        }
+
+        /* Formulaire */
+        form {
+            margin-top: 20px;
+        }
+
+        /* Chaque ligne du formulaire (icône + champ) */
+        .form-group {
+            width: 60%;
+            margin: 20px auto;             /* centré horizontalement */
+            display: flex;                 /* icône + input sur une ligne */
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #fff;
+        }
+
+        /* Ajouter un peu plus d'espace entre Nom d'utilisateur et Mot de passe */
+        .form-group + .form-group {
+            margin-top: 25px;              /* espace plus grand entre les champs */
+        }
+
+        /* Icône dans le formulaire */
+        .form-group span {
+            background: #eee;               /* fond gris clair */
+            padding: 12px 16px;             /* espace autour de l'icône */
+            border-right: 1px solid #ccc;   /* ligne verticale */
+            font-size: 18px;                /* taille de l'icône */
+            color: #888;                     /* icône grise */
+        }
+
+        /* Champ texte du formulaire */
+        .form-group input {
+            border: none;
+            padding: 14px;
+            width: 100%;                     /* prend tout l'espace restant */
+            font-size: 15px;
+            outline: none;
+        }
+
+        /* Bouton "Se connecter" */
+        .btn-login {
+            display: block;
+            margin-left: auto;              /* aligné à droite */
+            margin-right: 60px;
+            margin-top: 40px;
+            background: #5bc0de;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-login:hover {
+            background: #31b0d5;            /* changement de couleur au survol */
+        }
+
+        /* Bloc gris en bas pour les trois boutons */
+        .button-section {
+            background: #eee;               /* fond gris clair */
+            padding: 10px;                  /* espace interne autour des boutons */
+            display: flex;                  /* boutons sur la même ligne */
+            justify-content: center;        /* centre horizontalement */
+            gap: 15px;                      /* espace entre chaque bouton */
+            border-radius: 0 0 5px 5px;     /* coins arrondis seulement en bas */
+            margin: 40px 0 0 0;             /* marge au-dessus pour séparer Se connecter du bloc */
+        }
+
+        /* Style des boutons */
+        .btn {
+            border: none;
+            padding: 14px 25px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .btn-warning {
+            background: #f0ad4e;
+        }
+
+        .btn-primary {
+            background: #337ab7;
+        }
+
+        .btn-success {
+            background: #5cb85c;
+        }
+
+        /* Lien à l'intérieur du bouton vert */
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Titre -->
+        <div class="header">Espace étudiants</div>
+
+        <!-- Message d'information -->
+        <div class="info">
+            Veuillez renseigner le nom d'utilisateur et le mot de passe
+        </div>
+
+        <!-- Formulaire -->
+        <form>
+            <!-- Ligne pour le nom d'utilisateur -->
+            <div class="form-group">
+                <span>👤</span> <!-- Icône utilisateur grise -->
+                <input type="text" placeholder="Nom d'utilisateur">
+            </div>
+
+            <!-- Ligne pour le mot de passe -->
+            <div class="form-group">
+                <span>🔒</span> <!-- Icône mot de passe grise -->
+                <input type="password" placeholder="Mot de passe">
+            </div>
+
+            <!-- Bouton Se connecter -->
+            <button type="submit" class="btn-login">Se connecter</button>
+        </form>
+
+        <!-- Bloc gris en bas avec les trois boutons -->
+        <div class="button-section">
+            <button class="btn btn-warning">Mot de passe oublié ?</button>
+            <button class="btn btn-primary">Vérifier autorisation ?</button>
+            <button class="btn btn-success">
+                <a href="creation-compte.html">Créer un compte</a>
+            </button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
