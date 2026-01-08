@@ -1,15 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Création de votre compte d'accès</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            background: #f2f2f2;
+            padding: 40px;
+        }
+        .container {
+            width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+        }
+        .header {
+            background: #ededed;
+            padding: 12px 20px;
+            font-weight: bold;
+            color: #333;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .rules {
+            padding: 15px 20px 5px 20px;
+            color: red;
+            font-size: 14px;
+        }
+        .rules ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        /* Cadre autour du formulaire */
+        .form-wrapper {
+            border: 1px solid #ccc; /* cadre léger */
+            border-radius: 4px;
+            padding: 15px 20px;
+            margin: 0 20px;
+        }
+        .form {
+            padding: 0;
+        }
+        .row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .row label {
+            width: 240px;
+            color: #555;
+            font-size: 14px;
+        }
+        .row input, .row select {
+            width: 350px;
+            padding: 7px 8px;
+            border: 1px solid #d9d9d9;
+            border-radius: 3px;
+            font-size: 14px;
+            background: #f2f2f2;
+        }
+        .captcha-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .regen {
+            background: #5bc0de;
+            color: #fff;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .captcha-box {
+            width: 160px;
+            height: 45px;
+            background: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            letter-spacing: 2px;
+            font-family: "Courier New", Courier, monospace;
+            color: #000;
+            border: none;
+        }
+        .actions {
+            padding: 15px 20px 25px 20px;
+            text-align: center;
+        }
+        .valider {
+            background: #5cb85c;
+            color: #fff;
+            border: 1px solid #4cae4c;
+            padding: 8px 18px;
+            border-radius: 3px;
+            font-size: 14px;
+            margin-right: 8px;
+            cursor: pointer;
+        }
+        .annuler {
+            background: #d9534f;
+            color: #fff;
+            border: 1px solid #d43f3a;
+            padding: 8px 18px;
+            border-radius: 3px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <section>
-<h4>création d'un compte d'acces</h4>
-<form ></form>
 
-    </section>
+<div class="container">
+    <div class="header">Création de votre compte d'accès</div>
+
+    <div class="rules">
+        <ul>
+            <li>Tous les champs sont obligatoires</li>
+            <li>Le mot de passe doit contenir 8 caractères minimum avec un mélange de chiffres et de lettres.</li>
+        </ul>
+    </div>
+
+    <!-- Cadre autour du formulaire -->
+    <div class="form-wrapper">
+        <div class="form">
+            <div class="row">
+                <label>Type d'identifiant :</label>
+                <select>
+                    <option>Sélectionnez le type d'identifiant</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label>Votre Identifiant :</label>
+                <input type="text" placeholder="Votre Identifiant">
+            </div>
+
+            <div class="row">
+                <label>Nom :</label>
+                <input type="text" placeholder="Nom de famille">
+            </div>
+
+            <div class="row">
+                <label>Prénoms :</label>
+                <input type="text" placeholder="Prénoms">
+            </div>
+
+            <div class="row">
+                <label>Mot de passe :</label>
+                <input type="password" placeholder="Créer un mot de passe pour la connexion">
+            </div>
+
+            <div class="row">
+                <label>Confirmation du mot de passe :</label>
+                <input type="password" placeholder="Confirmer votre mot de passe">
+            </div>
+
+            <div class="row">
+                <label>E-mail Personnel :</label>
+                <input type="email" placeholder="E-mail personnel">
+            </div>
+
+            <div class="row">
+                <label>Captcha :</label>
+                <input type="text" placeholder="Saisissez les caractères ci-dessous">
+            </div>
+
+            <!-- Bouton Régénérer à gauche du captcha -->
+            <div class="captcha-row">
+                <button class="regen">Régénérer</button>
+                <div class="captcha-box"><span>XG6GW</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Boutons Valider et Annuler en dehors du cadre -->
+    <div class="actions">
+        <button class="valider">Valider</button>
+        <button class="annuler">Annuler</button>
+    </div>
+</div>
+
 </body>
 </html>
